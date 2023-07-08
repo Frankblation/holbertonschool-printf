@@ -19,11 +19,9 @@ int _printf(const char *format, ...)
         if (*format == '%')
         {
             format++;
-            int  = 0;
             if (*format == 'd' || *format == 'i')
             {
                 char_count += integer(args);
-                 = 1;
             }
             else if (*format == 'c')
             {
