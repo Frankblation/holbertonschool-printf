@@ -1,4 +1,12 @@
-int _print_string(va_list args)
+#include "main.h"
+
+/**
+* string - prints a string
+* @args: pointer to the arguments in printf
+*
+* Return: # of characters printed
+*/
+int string(va_list args)
 {
     char *str = va_arg(args, char*);
     int char_count = 0;
@@ -16,5 +24,5 @@ int _print_string(va_list args)
         }
     }
 
-    return char_count;
+    return (char_count);
 }

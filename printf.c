@@ -1,14 +1,21 @@
-l#include <stdarg.h>
-#include <unistd.h>
+#include "main.h"
 
-int _putchar(char c);
-int _print_integer(va_list args);
-int _print_char(va_list args);
-int _print_string(va_list args);
-
+/**
+*_printf - print multiple types of data
+* @format: list of arguments
+*
+* Return: number of characters printed
+*/
 int _printf(const char *format, ...)
 {
     va_list args;
+    form_t type[] = {
+		{ "i", integer },
+        { "d", unsignedint}
+		{ "c", character },
+		{ "s", string },
+        { "%", percent}
+	};
     va_start(args, format);
 
     int char_count = 0;
@@ -20,17 +27,22 @@ int _printf(const char *format, ...)
             int handled = 0;
             if (*format == 'd' || *format == 'i')
             {
-                char_count += _print_integer(args);
+                char_count += integer(args);
                 handled = 1;
             }
             else if (*format == 'c')
             {
-                char_count += _print_char(args);
+                char_count += character(args);
                 handled = 1;
             }
             else if (*format == 's')
             {
-                char_count += _print_string(args);
+                char_count += string(args);
+                handled = 1;
+            }
+            else if (*format == '%')
+            {
+                char_count += percent(args);
                 handled = 1;
             }
         }
@@ -45,5 +57,5 @@ int _printf(const char *format, ...)
 
     va_end(args);
 
-    return char_count;
+    return (char_count);
 }

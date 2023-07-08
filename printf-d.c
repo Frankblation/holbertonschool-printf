@@ -1,4 +1,10 @@
-int _print_integer(va_list args)
+/**
+* integer - prints an integer
+* @args: pointer to the arguments in printf
+*
+* Return: number of characters printed
+*/
+int integer(va_list args)
 {
     int num = va_arg(args, int);
     char num_str[20];
@@ -9,5 +15,5 @@ int _print_integer(va_list args)
     for (int i = 0; i < char_count; i++)
         _putchar(num_str[i]);
 
-    return char_count;
+    return (char_count);
 }
