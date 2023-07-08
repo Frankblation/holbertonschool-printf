@@ -8,6 +8,7 @@
 
 int integer(va_list args);
 int character(va_list args);
+int percent(va_list args);
 int string(va_list args);
 int _putchar(char c);
 int slen(char *s);
