@@ -13,13 +13,14 @@ int _printf(const char *format, ...)
     va_start(args, format);
    
     char_count = 0;
-    if (format == NULL)
-    {
-        return (NULL);
-    }
+    
     while (*format)
     {
-        if (*format == '%')
+        if (format == NULL)
+        {
+            return (char_count);
+        }
+        else if (*format == '%')
         {
             format++;
             if (*format == 'd' || *format == 'i')
@@ -39,12 +40,10 @@ int _printf(const char *format, ...)
                 _putchar('%');
                 char_count += 1;
             }
-	    else
-	    {
-		_putchar(*format);
-		char_count += 1;
-	    }
-	}
+            else
+            {
+                return (char_count);
+            }
 	else
 	{
 		_putchar(*format);
