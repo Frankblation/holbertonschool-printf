@@ -39,17 +39,19 @@ int _printf(const char *format, ...)
                 }
                 else
                 {
-                    return (char_count);
-                    }
-            }
-            else
-            {
-                _putchar(*format);
-                char_count++;
+                    _putchar('%');
+                    _putchar(*format);
+                    char_count += 2;
+                }
             }
             format++;
         }
-        va_end(args);
     }
+    else
+    {
+        return (char_count);
+        exit;
+    }
+    va_end(args);
     return (char_count);
 }
