@@ -53,7 +53,7 @@ int _printf(const char *format, ...)
     }
     else
     {
-        return (NULL);
+        return (0);
     }
     va_end(args);
     return (char_count);
