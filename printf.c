@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
     char_count = 0;
     if (format == NULL)
     {
-        return (char_count);
+        return (NULL);
     }
     while (*format)
     {
@@ -41,9 +41,8 @@ int _printf(const char *format, ...)
             }
 	    else
 	    {
-		_putchar('%');
 		_putchar(*format);
-		char_count += 2;
+		char_count += 1;
 	    }
 	}
 	else
