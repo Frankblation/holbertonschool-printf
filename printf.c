@@ -44,6 +44,11 @@ int _printf(const char *format, ...)
                     char_count += 2;
                 }
             }
+            else
+            {
+                _putchar(*format);
+                char_count++;
+            }
             format++;
         }
     }
