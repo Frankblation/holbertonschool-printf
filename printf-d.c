@@ -9,8 +9,8 @@
 int integer(va_list args)
 {
     int i;
-    int num;
-    char num_str[20];
+    int num = va_arg(args, int);
+    char num_str[90];
     int char_count = snprintf(num_str, sizeof(num_str), "%d", num);
     num = va_arg(args, int);
     if (char_count < 0)

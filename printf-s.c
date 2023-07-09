@@ -12,7 +12,7 @@ int string(va_list args)
     int char_count = 0;
     if (str == NULL)
     {
-        char_count += _printf("(nil)");
+        char_count += _printf("(null)");
     }
     else
     {
