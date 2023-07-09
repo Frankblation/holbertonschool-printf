@@ -32,7 +32,8 @@ int _printf(const char *format, ...)
             }
             else if (*format == '%')
             {
-                char_count += percent(args);
+                _putchar('%');
+                char_count += 1;
             }
 	    else
 	    {
