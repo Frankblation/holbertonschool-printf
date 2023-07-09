@@ -44,6 +44,7 @@ int _printf(const char *format, ...)
             {
                 return (char_count);
             }
+        }
 	else
 	{
 		_putchar(*format);
