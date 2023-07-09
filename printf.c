@@ -50,7 +50,6 @@ int _printf(const char *format, ...)
     else
     {
         return (char_count);
-        exit;
     }
     va_end(args);
     return (char_count);
