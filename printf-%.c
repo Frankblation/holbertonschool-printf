@@ -13,5 +13,6 @@ int percent(va_list args)
     if (c == '%')
     {
         _putchar('%');
+    }
     return 1;
 }
