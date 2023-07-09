@@ -2,5 +2,5 @@
 git add .
 read -p "Commit Description:" msg
 git commit -m "$msg"
-git push
+git push origin main
 echo -e "\nSweet!\nHope it works!\n”
