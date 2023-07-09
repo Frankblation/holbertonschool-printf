@@ -1,16 +1,20 @@
 #include "main.h"
 
 /**
-* percent - print a character
-* @arg: pointer to the arguments in printf
-*
-* Return: pointer to the arguments in printf
-*/
+ * percent - print a character
+ * @args: pointer to the arguments in printf
+ *
+ * Return: number of characters printed (always 1)
+ */
 int percent(va_list args)
 {
-    char c;
-    c = va_arg(args, int);
-    _putchar(c);
-    
-    return (1);
+	char c = va_arg(args, int);
+
+    if (c < ' ' || c > '~')
+    {
+        _putchar('%');
+    } else {
+	    _putchar(c);
+    }
+    return 1;
 }
