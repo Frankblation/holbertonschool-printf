@@ -9,7 +9,7 @@
 int integer(va_list args)
 {
     int i;
-    int num = va_arg(agrs, int);
+    int num = va_arg(args, int);
     char num_str[20];
     int char_count = snprintf(num_str, sizeof(num_str), "%d", num);
     num = va_arg(args, int);
