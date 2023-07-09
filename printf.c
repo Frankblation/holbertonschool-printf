@@ -39,9 +39,8 @@ int _printf(const char *format, ...)
                 }
                 else
                 {
-                    _putchar('%');
                     _putchar(*format);
-                    char_count += 2;
+                    char_count += 1;
                 }
             }
             else
@@ -54,7 +53,7 @@ int _printf(const char *format, ...)
     }
     else
     {
-        return (char_count);
+        return (NULL);
     }
     va_end(args);
     return (char_count);
