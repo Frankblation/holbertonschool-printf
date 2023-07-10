@@ -16,8 +16,13 @@ char_count = 0;
     {
         if (*format == '%')
         {
-            format++;
-            if (*format == 'd' || *format == 'i')
+            if (*(format + 1) == '%')
+            {
+                _putchar('%');
+                format++;
+                char_count++;
+            }
+            else (*format == 'd' || *format == 'i')
             {
             char_count += integer(args);
             }
