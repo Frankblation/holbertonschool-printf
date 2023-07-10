@@ -7,11 +7,11 @@
  */
 int _printf(const char *format, ...)
 {
-        int char_count;
-        va_list args;
-        va_start(args, format);
-        char_count = 0;
-        if (format != NULL)
+    int char_count;
+    va_list args;
+    va_start(args, format);
+    char_count = 0;
+    if (format != NULL)
         {
             while (*format)
             {
