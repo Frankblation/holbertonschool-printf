@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int helper(const char *format, va_list args);
 int integer(va_list args);
 int character(va_list args);
 int string(va_list args);
