@@ -5,10 +5,11 @@
  *
  * Return: number of characters printed
  */
+ 
 int _printf(const char *format, ...)
 {
-    va_list args;
     int char_count;
+    va_list args;
     
     va_start(args, format);
     char_count = 0;
