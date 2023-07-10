@@ -6,9 +6,10 @@
  *
  * Return: number of characters printed
  */
-int helper(format, args)
+int helper(const char *format, va_list args)
+
 {
-int char_count;
+    int char_count;
 char_count = 0;
 while (*format)
 {

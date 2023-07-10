@@ -17,7 +17,7 @@ return (-1);
 }
 else
 {
-char_count = helper(format, args);
+char_count += helper(format, args);
 }
 va_end(args);
 return (char_count);
