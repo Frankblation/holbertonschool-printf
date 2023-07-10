@@ -13,8 +13,8 @@ int helper(const char *format, va_list args)
 char_count = 0;
 
     while (*format)
-        {
-         if (*format == '%')
+{
+if (*format == '%')
 {
 format++;
 if (*format == 'd' || *format == 'i')
@@ -33,22 +33,15 @@ else if (*format == '%')
 {
 _putchar(*format);
 char_count += 2;
-}
-else
-{
-_putchar('%');
-_putchar(*format);
-char_count += 2;
-}
-}
-else
-{
-_putchar(*format);
-char_count++;
-}
-format++;
-}
-}
-{
-return (0);
+ }
+     format++;
+        }
+        else
+        {
+            _putchar(*format);
+            char_count++;
+        }
+    }
+
+    return char_count;
 }
