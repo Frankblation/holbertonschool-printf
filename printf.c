@@ -55,7 +55,6 @@ else
 {
 return (0);
 }
-  
 va_end(args);
 return (char_count);
 }
