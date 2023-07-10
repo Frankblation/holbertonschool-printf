@@ -6,6 +6,7 @@
 *
 * Return: pointer to the arguments in printf
 */
+
 int character(va_list args)
 {
     char c;
