@@ -43,18 +43,21 @@ int _printf(const char *format, ...)
                                         char_count += 2;
                                 }
                         }
+
+                        else
+                        {
+                                _putchar(*format);
+                                char_count++;
+                        }
+                        format++;
                 }
-                else
-                {
-                        _putchar(*format);
-                        char_count++;
-                }
-                format++;
         }
+
         else
         {
                 return (0);
         }
+        
         va_end(args);
         return (char_count);
 }
