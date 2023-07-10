@@ -2,7 +2,7 @@
 
 /**
 * character - print a character
-* @arg: pointer to the arguments in printf
+* @args: pointer to the arguments in printf
 *
 * Return: pointer to the arguments in printf
 */
