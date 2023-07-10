@@ -9,9 +9,8 @@ int _printf(const char *format, ...)
 {
     va_list args;
     int char_count;
-
+    
     va_start(args, format);
-   
     char_count = 0;
     if (format != NULL)
     {
@@ -22,7 +21,7 @@ int _printf(const char *format, ...)
                 format++;
                 if (*format == 'd' || *format == 'i')
                 {
-                char_count += integer(args);
+                    char_count += integer(args);
                 }
                 else if (*format == 'c')
                 {
