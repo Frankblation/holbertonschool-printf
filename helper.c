@@ -1,7 +1,14 @@
+#include "main.h"
+/**
+ * helper - helps print multiple types of data
+ * @format: list of argument
+ * @args: arguments
+ *
+ * Return: number of characters printed
+ */
 int helper(const char *format, va_list args)
 {
     int char_count = 0;
-
     while (*format != '\0')
     {
         if (*format == '%')
@@ -39,9 +46,7 @@ int helper(const char *format, va_list args)
             _putchar(*format);
             char_count++;
         }
-
         format++;
     }
-
     return char_count;
 }
