@@ -12,7 +12,7 @@ va_list args;
 
 va_start(args, format);
 char_count = 0;
-if (format != NULL)
+if (format != NULL && *format != '\0')
 {
 while (*format)
 {
