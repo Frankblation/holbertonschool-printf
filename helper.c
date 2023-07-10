@@ -22,7 +22,7 @@ char_count = 0;
                 format++;
                 char_count++;
             }
-            else (*format == 'd' || *format == 'i')
+            else if (*format == 'd' || *format == 'i')
             {
             char_count += integer(args);
             }
