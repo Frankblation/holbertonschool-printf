@@ -13,16 +13,15 @@ int char_count = 0;
 if (str == NULL)
 {
 char_count += _printf("(null)");
-    }
-    else
-    {
-        while (*str)
-        {
-            _putchar(*str);
-            str++;
-            char_count++;
-        }
-    }
-
-    return (char_count);
+}
+else
+{
+while (*str)
+{
+_putchar(*str);
+str++;
+char_count++;
+}
+}
+return (char_count);
 }
