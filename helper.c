@@ -11,9 +11,10 @@ int helper(const char *format, va_list args)
 {
     int char_count;
 char_count = 0;
-while (*format)
-{
-if (*format == '%')
+
+    while (*format)
+        {
+         if (*format == '%')
 {
 format++;
 if (*format == 'd' || *format == 'i')
@@ -30,32 +31,24 @@ char_count += string(args);
 }
 else if (*format == '%')
 {
-char_count += _putchar('%');
+_putchar(*format);
+char_count += 2;
 }
 else
 {
-char_count += _putchar(*format);
+_putchar('%');
+_putchar(*format);
+char_count += 2;
 }
 }
 else
 {
 _putchar(*format);
+char_count++;
+}
 format++;
 }
 }
-return (char_count);
+{
+return (0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
