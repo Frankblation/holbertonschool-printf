@@ -1,16 +1,6 @@
-#include "main.h"
-/**
- * helper - helps print multiple types of data
- * @format: list of argument
- * @args: arguments
- *
- * Return: number of characters printed
- */
 int helper(const char *format, va_list args)
-
 {
-    int char_count;
-char_count = 0;
+    int char_count = 0;
 
     while (*format != '\0')
     {
@@ -22,22 +12,26 @@ char_count = 0;
                 format++;
                 char_count++;
             }
-            else if (*format == 'd' || *format == 'i')
+            else if (*(format + 1) == 'd' || *(format + 1) == 'i')
             {
-            char_count += integer(args);
+                char_count += integer(args);
+                format++;
             }
-            else if (*format == 'c')
+            else if (*(format + 1) == 'c')
             {
-            char_count += character(args);
+                char_count += character(args);
+                format++;
             }
-            else if (*format == 's')
+            else if (*(format + 1) == 's')
             {
-            char_count += string(args);
+                char_count += string(args);
+                format++;
             }
-            else if (*format == '%')
+            else
             {
-            _putchar(*format);
-            char_count += 2;
+                _putchar('%');
+                _putchar(*format);
+                char_count += 2;
             }
         }
         else
