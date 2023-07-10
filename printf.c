@@ -34,13 +34,14 @@ int _printf(const char *format, ...)
                 }
                 else if (*format == '%')
                 {
-                    _putchar('%');
-                    char_count += 1;
+                    _putchar(*format);
+                    char_count += 2;;
                 }
                 else
                 {
+                    _putchar('%');
                     _putchar(*format);
-                    char_count += 1;
+                    char_count += 2;
                 }
             }
             else

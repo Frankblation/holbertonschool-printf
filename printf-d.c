@@ -9,14 +9,12 @@
 int integer(va_list args)
 {
     int i;
-    int num = va_arg(args, int);
+    int num;
     char num_str[90];
-    int char_count = snprintf(num_str, sizeof(num_str), "%d", num);
     num = va_arg(args, int);
-    if (char_count < 0)
-        return (0);
-
-    for (i = 0; i < char_count; i++)
+    int char_count = snprintf(num_str, sizeof(num_str), "%d", num);
+    
+    for (i = 0; num_str[i] != '\0'; i++)
         _putchar(num_str[i]);
 
     return (char_count);
