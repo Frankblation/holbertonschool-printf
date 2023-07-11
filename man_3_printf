@@ -2,7 +2,7 @@
 
 .SH NAME
 
-_printf \- produces converted output according to a format.
+_printf - produces converted output according to a format.
 
 .SH SYNOPSIS
 #include "main.h"
@@ -10,10 +10,10 @@ _printf \- produces converted output according to a format.
 int _printf(const char *format, ...);
 
 .SH DESCRIPTION
-_printf() produces output acccording to a format string that specifies how subsequent arguments are converted, and then writes the output to the standard output library.
+_printf() is a variadic function produces output acccording to a format that specifies how subsequent arguments are converted, and then writes the output to the standard output library.
 
 .SH conversion specifiers
-Character that indicates the type of conversion needed to print the given format string. These are the conversion specifiers available in this function:
+Character that indicates the type of conversion needed to print the given format. These are the conversion specifiers available in this function:
 
 .TP
 .BR d, i
@@ -29,24 +29,24 @@ prints a string
 A single '%' is written and no argument is converted.
 
 .SH EXAMPLES
-.B test our function:
+.B function testing
 
 .PP
 #include "main.h"
 .PP
-_printf("%c is a character\n", 'F');
+_printf("%c is a character", 'F');
 .PP
 F is a character
 .PP
-_printf("%s is a string\n", "You are reading a string.");
+_printf("%s is a string", "You are reading a string.");
 .PP
 You are reading a string. is a string
 .PP
-_printf("%d is an integer\n", '37');
+_printf("%d is an integer", '37');
 .PP
 37 is an integer
 .PP
-_printf("%i is a signed or unsigned integer\n", -37)
+_printf("%i is a signed or unsigned integer", -37)
 .PP
 -37 is a signed or unsigned integer
 .PP
