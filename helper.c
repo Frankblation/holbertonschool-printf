@@ -37,7 +37,7 @@ int helper(const char *format, va_list args)
             else
             {
                 _putchar(*format);
-                char_count += 1;
+                char_count += 2;
             }
         }
         else
