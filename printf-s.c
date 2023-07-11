@@ -8,20 +8,22 @@
 */
 int string(va_list args)
 {
-    char *str = va_arg(args, char*);
-    int char_count = 0;
-    if (str == NULL)
-    {
-    char_count += _printf("(null)");
-    }
+	char *str = va_arg(args, char*);
 
-    else
+	int char_count = 0;
 
-    while (*str != '\0')
-
-    _putchar(*str);
-    str++;
-    char_count++;
-
-    return (char_count);
+	if (str == NULL)
+	{
+		char_count += _printf("(null)");
+	}
+	else
+	{
+		while (*str != '/0')
+		{
+			_putchar(*str);
+			str++;
+			char_count++;
+		}
+	}
+	return (char_count);
 }
