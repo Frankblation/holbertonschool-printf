@@ -13,7 +13,7 @@ int helper(const char *format, va_list args)
     {
         if (*format == '%' && *(format + 1) != '\0')
         {
-            if (*(format + 1) == '%')
+            if (*(format + 1) == '%' && *(format + 1) != '\0')
             {
                 _putchar('%');
                 format++;
