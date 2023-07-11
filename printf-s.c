@@ -14,10 +14,11 @@ int string(va_list args)
     {
     char_count += _printf("(null)");
     }
+
     else
-    {
+
     while (*str != '\0')
-    }
+
     _putchar(*str);
     str++;
     char_count++;
