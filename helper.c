@@ -41,9 +41,9 @@ int helper(const char *format, va_list args)
                 char_count += 2;
             }
         }
-        else if (*format == '%' && *(format + 1) == '\0')
+        else if (*format == '%')
         {
-            char_count++;
+            char_count =+ 1;
         }
         else
         {
