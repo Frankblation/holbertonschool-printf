@@ -17,6 +17,8 @@ int helper(const char *format, va_list args)
             if (*(format + 1) == '%')
             {
             _putchar('%');
+                format++;
+                char_count += 1;
             }
             else if (*(format + 1) == 'd' || *(format + 1) == 'i')
             {
@@ -44,7 +46,7 @@ int helper(const char *format, va_list args)
         else
         {
             _putchar(*format);
-            char_count++;
+            char_count -= 1;
         }
         format++;
     }
