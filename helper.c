@@ -38,7 +38,6 @@ int helper(const char *format, va_list args)
             else
             {
                 _putchar(*format);
-                char_count += 0;
             }
         }
         else if (*format == '%' && *(format + 1) == '\0')
