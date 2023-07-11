@@ -8,7 +8,8 @@
  */
 int helper(const char *format, va_list args)
 {
-    int char_count = 0;
+    int char_count;
+    char_count = 0;
     while (*format != '\0')
     {
         if (*format == '%' && *(format + 1) != '\0')
@@ -40,6 +41,8 @@ int helper(const char *format, va_list args)
                 char_count += 2;
             }
         }
+        else if (*format == '%' && *(format + 1) == '\0')
+            char_count = 0;
         else
         {
             _putchar(*format);
@@ -47,5 +50,5 @@ int helper(const char *format, va_list args)
         }
         format++;
     }
-    return char_count;
+    return (char_count);
 }
