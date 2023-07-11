@@ -14,9 +14,9 @@ int helper(const char *format, va_list args)
     {
         if (*format == '%' && *(format + 1) != '\0')
         {
-            if (*(format + 1) == '%' && *(format + 1) != '\0')
+            if (*(format + 1) == '%')
             {
-                _putchar('%');
+            _putchar('%');
                 format++;
                 char_count++;
             }
