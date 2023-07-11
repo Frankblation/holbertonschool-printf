@@ -8,18 +8,21 @@
 int _printf(const char *format, ...)
 {
 
-int char_count;
-va_list args;
-char_count = 0;
-va_start(args, format);
-if (format == NULL)
-{
-return (-1);
-}
-else
-{
-char_count += helper(format, args);
-}
-va_end(args);
-return (char_count);
+	int char_count;
+	va_list args;
+
+	char_count = 0;
+
+	va_start(args, format);
+	if (format == NULL)
+	{
+	return (-1);
+	}
+	else
+	{
+	char_count += helper(format, args);
+	}
+	va_end(args);
+
+	return (char_count);
 }
