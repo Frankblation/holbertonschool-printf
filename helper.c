@@ -35,10 +35,6 @@ int helper(const char *format, va_list args)
                 char_count += string(args);
                 format++;
             }
-            else
-            {
-                _putchar(*format);
-            }
         }
         else if (*format == '%' && *(format + 1) == '\0')
             char_count = 0;
