@@ -11,7 +11,7 @@ int helper(const char *format, va_list args)
     int char_count = 0;
     while (*format != '\0')
     {
-        if (*format == '%')
+        if (*format == '%' && *(format + 1) != '\0')
         {
             if (*(format + 1) == '%')
             {
