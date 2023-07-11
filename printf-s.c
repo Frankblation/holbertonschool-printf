@@ -8,20 +8,20 @@
 */
 int string(va_list args)
 {
-char *str = va_arg(args, char*);
-int char_count = 0;
-if (str == NULL)
-{
-char_count += _printf("(null)");
-}
-else
-{
-while (*str != '\0')
-{
-_putchar(*str);
-str++;
-char_count++;
-}
-}
-return (char_count);
+
+    char *str = va_arg(args, char*);
+    int char_count = 0;
+
+    if (str == NULL)
+    {
+        str = "(null)";
+    }
+
+    for (int i =0; str[i] != '\0'; i++)
+    {
+        _putchar(str[i]);
+        char_count++;
+
+    }
+    return (char_count);
 }
