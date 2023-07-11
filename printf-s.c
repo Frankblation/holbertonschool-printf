@@ -18,7 +18,7 @@ int string(va_list args)
 	}
 	else
 	{
-		while (*str != '/0')
+		while (*str != '\0')
 		{
 			_putchar(*str);
 			str++;
