@@ -18,7 +18,6 @@ int helper(const char *format, va_list args)
             {
             _putchar('%');
                 format++;
-                char_count += 1;
             }
             else if (*(format + 1) == 'd' || *(format + 1) == 'i')
             {
@@ -34,10 +33,6 @@ int helper(const char *format, va_list args)
             {
                 char_count += string(args);
                 format++;
-            }
-            else
-            {
-                _putchar(*format);
             }
         }
         else if (*format == '%' && *(format + 1) == '\0')
