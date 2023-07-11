@@ -29,20 +29,21 @@ int helper(const char *format, va_list args)
             {
                 char_count += character(args);
                 format++;
+                char_count += 2;
             }
             else if (*(format + 1) == 's')
             {
                 char_count += string(args);
                 format++;
-            }
+                char_count += 2;
             else
             {
                 _putchar(*format);
-                char_count += 2;
+                char_count += 1;
             }
         }
         else if (*format == '%' && *(format + 1) == '\0')
-            char_count = 0;
+            char_count++;
         else
         {
             _putchar(*format);
