@@ -16,7 +16,7 @@ char_count += _printf("(null)");
 }
 else
 {
-while (*str)
+while (*str != '\0')
 {
 _putchar(*str);
 str++;
