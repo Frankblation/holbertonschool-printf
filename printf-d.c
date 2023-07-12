@@ -10,7 +10,7 @@ int integer(va_list args)
 {
 int i;
 int num;
-char num_str[20];
+char num_str[90];
 int char_count;
 
 num = va_arg(args, int);
