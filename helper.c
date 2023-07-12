@@ -10,7 +10,6 @@ int helper(const char *format, va_list args)
 {
     int char_count;
     char_count = 0;
-
     while (*format != '\0')
     {
         if (*format == '%' && *(format + 1) != '\0')
@@ -42,7 +41,7 @@ int helper(const char *format, va_list args)
         else
         {
             _putchar(*format);
-            char_count += 2;
+            char_count += 1;
         }
         format++;
     }
