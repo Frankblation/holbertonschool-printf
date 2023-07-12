@@ -11,11 +11,6 @@ int helper(const char *format, va_list args)
     int char_count;
     char_count = 0;
 
-if (format == NULL || (format[0] == '%' && format[1] != '\0'))
-{
-    return (0);
-}
-
     while (*format != '\0')
     {
         if (*format == '%' && *(format + 1) != '\0')
